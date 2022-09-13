@@ -9,7 +9,7 @@ html {
 /* Fonts */
 @font-face {
     font-family: "TTLakes";
-    src: url("/assets/fonts/TTLakes/TTLakes-Medium.woff");
+    src: url("assets/fonts/TTLakes/TTLakes-Medium.woff");
 }
 
 body {
