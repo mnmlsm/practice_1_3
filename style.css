@@ -182,7 +182,7 @@ body {
 }
 
 .main-article__bottom-image {
-    width: 320px;
+    width: 100%;
 }
 
 /* Media запросы */
