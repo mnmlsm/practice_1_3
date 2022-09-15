@@ -14,167 +14,137 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Normalize.css -->
     <link rel="stylesheet" href="assets/normalize.css" />
-    <!-- Подключение пользовательских шрифтов  -->
-    <link rel="stylesheet" href="assets/fonts/TTLakes/TTLakes-font.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="left-part header__left-part">
-        <button class="burger-button">
+    <div class="container">
+      <!-- Header -->
+      <header class="page-header">
+        <div
+          class="logo-burger-btn-section page-header__logo-burger-btn-section"
+        >
+          <button
+            class="user-button logo-burger-btn-section__burger-button"
+          ></button>
           <img
-            src="assets/images/header/burger.png"
-            alt="burger-image"
-            class="burger-button__image"
+            class="main-logo"
+            src="assets/images/header/logo.svg"
+            alt="logo"
           />
-        </button>
-        <img
-          src="assets/images/header/logo.svg"
-          alt="logo"
-          class="left-part__logo"
-        />
-        <img
-          src="assets/images/header/divider.png"
-          alt="divider"
-          class="left-part__divider-image"
-        />
-      </div>
-      <div class="right-part header__right-part">
-        <div class="connection-buttons">
-          <button class="connection-buttons__call-button">
-            <img
-              src="assets/images/header/call.png"
-              alt="call button"
-              class="call-button__icon"
-            />
-          </button>
-          <button class="connection-buttons__chat-button">
-            <img
-              src="assets/images/header/chat.png"
-              alt="chat button"
-              class="chat-button__icon"
-            />
-          </button>
-          <button class="connection-buttons__profile-button">
-            <img
-              src="assets/images/header/profile.png"
-              alt="profile button"
-              class="profile-button__icon"
-            />
-          </button>
-          <img
-            src="assets/images/header/divider.png"
-            alt="divider"
-            class="connection-buttons__divider-image"
-          />
+          <div class="divider-image"></div>
         </div>
-        <div class="service-buttons">
-          <label class="repair-label" for="repair-btn"> Оставить заявку </label>
-          <button class="repair-button" id="repair-btn">
-            <img
-              src="assets/images/header/repair.png"
-              alt="repair-button"
-              class="repair-button__icon"
-            />
-          </button>
-          <label class="status-label" for="status-btn"> Статус ремонта </label>
-          <button class="status-button" id="status-btn">
-            <img
-              src="assets/images/header/checkstatus.png"
-              alt="status-button"
-              class="status-button__icon"
-            />
-          </button>
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <div class="main-top main__top-part">
-        <div class="main-top__header">
-          <img
-            src="assets/images/main/highlight.png"
-            alt="decoration image"
-            class="main-top__decoration-image"
-          />
-          <h1 class="main-top__header-h1">Услуги и сервисы</h1>
-        </div>
-
-        <div class="main-top__service-buttons">
-          <label class="repair-label" for="repair-btn"> Оставить заявку </label>
-          <button class="repair-button" id="repair-btn">
-            <img
-              src="assets/images/header/repair.png"
-              alt="repair-button"
-              class="repair-button__icon"
-            />
-          </button>
-          <label class="status-label" for="status-btn"> Статус ремонта </label>
-          <button class="status-button" id="status-btn">
-            <img
-              src="assets/images/header/checkstatus.png"
-              alt="status-button"
-              class="status-button__icon"
-            />
-          </button>
-        </div>
-      </div>
-      <nav class="main-menu">
-        <ul class="main-menu__list">
-          <li class="main-menu__item main-menu__item_focused">
-            <a href="#" class="main-menu__link">Ремонтируемые устройства</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#" class="main-menu__link">Дополнительные услуги</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#" class="main-menu__link">Цены на услуги</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#" class="main-menu__link"
-              >Адреса авторизованных центров</a
-            >
-          </li>
-          <li class="main-menu__item">
-            <a href="#" class="main-menu__link">Специальные цены</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#" class="main-menu__link">Отзывы</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="main-section main__middle-section">
-        <article class="main-article">
-          <p class="main-article__paragraph">
-            Мы являемся авторизованным сервисным центром по ремонту техники
-            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-            официальной гарантией производителя.
-          </p>
-          <p class="main-article__paragraph second-paragraph">
-            Мы успешно работаем с 1992 года и заслужили репутацию надежного
-            партнера<span class="second-paragraph__span"
-              >, что подтверждает большое количество постоянных клиентов. Мы
-              гордимся тем, что к нам обращаются по рекомендациям и, в свою
-              очередь, советуют нас родным и близким.</span
-            >
-          </p>
-          <div class="article-read-further main-article__read-further">
-            <label class="article-read-further__label">
-              <button class="article-read-further__button">
-                <img
-                  src="assets/images/main/read-further-btn.png"
-                  alt="read further button image"
-                  class="article-read-further__image"
-                />
-              </button>
-              Читать далее
-            </label>
+        <div class="user-buttons-set">
+          <div class="connection-buttons user-buttons-set__connection-buttons">
+            <button
+              class="user-button connection-buttons__call-button"
+            ></button>
+            <button
+              class="user-button connection-buttons__chat-button"
+            ></button>
+            <button
+              class="user-button connection-buttons__profile-button"
+            ></button>
+            <div class="divider-image connection-buttons__divider"></div>
           </div>
-        </article>
-        <img
-          src="assets/images/main/logo-picture.jpg"
-          alt="logo"
-          class="main-article__bottom-image"
-        />
-      </section>
-    </main>
+          <div class="service-buttons user-buttons-set__service-buttons">
+            <button
+              class="user-button service-buttons__repair-button"
+              id="repair-button"
+            ></button>
+            <button
+              class="user-button service-buttons__status-button"
+              id="status-button"
+            ></button>
+          </div>
+        </div>
+      </header>
+      <!-- Main page content -->
+      <main class="main-content">
+        <div
+          class="decor-header-user-buttons main-content__header-user-buttons"
+        >
+          <div class="decor-header decor-header-user-buttons__decor-header">
+            <div class="decor-header__decoration"></div>
+            <h1 class="decor-header__main-header">Услуги и сервисы</h1>
+          </div>
+
+          <div class="main-content__service-buttons">
+            <label class="repair-label" for="repair-btn">
+              Оставить заявку
+            </label>
+            <button
+              class="user-button service-buttons__repair-button"
+              id="repair-btn"
+            ></button>
+            <label class="status-label" for="status-btn">
+              Статус ремонта
+            </label>
+            <button
+              class="user-button service-buttons__status-button"
+              id="status-btn"
+            ></button>
+          </div>
+        </div>
+        <!-- Main Menu -->
+        <nav class="main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item main-menu__item--focused">
+              <a href="#" class="main-menu__link">Ремонтируемые устройства</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Дополнительные услуги</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Цены на услуги</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link"
+                >Адреса авторизованных центров</a
+              >
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Специальные цены</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Отзывы</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Description of Company -->
+        <section class="company-description main-content__company-description">
+          <div class="decription-text company-description__text">
+            <p class="description-text__paragraph">
+              Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.
+            </p>
+            <p class="second-paragraph description-text__paragraph">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера<span class="second-paragraph__end-of-description">
+                ,что подтверждает большое количество постоянных клиентов. Мы
+                гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                очередь, советуют нас родным и близким.</span
+              >
+            </p>
+            <div
+              class="description-read-further company-description__read-further"
+            >
+              <button
+                class="further-button description-read-further__button"
+                id="read-btn"
+              ></button>
+              <label class="description-read-further__label" for="read-btn">
+                Читать далее
+              </label>
+            </div>
+          </div>
+
+          <img
+            src="assets/images/main/logo-picture.png"
+            alt="logo"
+            class="company-description__logo"
+          />
+        </section>
+      </main>
+    </div>
   </body>
 </html>
