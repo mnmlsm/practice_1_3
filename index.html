@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Normalize.css -->
     <link rel="stylesheet" href="assets/normalize.css" />
+    <!-- подключение скриптов -->
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -34,15 +36,9 @@
         </div>
         <div class="user-buttons-set">
           <div class="connection-buttons user-buttons-set__connection-buttons">
-            <button
-              class="user-button connection-buttons__call-button"
-            ></button>
-            <button
-              class="user-button connection-buttons__chat-button"
-            ></button>
-            <button
-              class="user-button connection-buttons__profile-button"
-            ></button>
+            <button class="user-button call-button"></button>
+            <button class="user-button chat-button"></button>
+            <button class="user-button profile-button"></button>
             <div class="divider-image connection-buttons__divider"></div>
           </div>
           <div class="service-buttons user-buttons-set__service-buttons">
@@ -63,7 +59,7 @@
           class="decor-header-user-buttons main-content__header-user-buttons"
         >
           <div class="decor-header decor-header-user-buttons__decor-header">
-            <div class="decor-header__decoration"></div>
+            <div class="text-decoration decor-header__decoration"></div>
             <h1 class="decor-header__main-header">Услуги и сервисы</h1>
           </div>
 
@@ -145,6 +141,116 @@
           />
         </section>
       </main>
+      <div class="opacity-container">
+        <div class="burger-slide-menu">
+          <div class="burger-menu-container">
+            <div class="burger-top-logo-menu">
+              <header class="slide-menu-header burger-menu-container__header">
+                <div
+                  class="logo-close-btn-section slide-menu__logo-close-btn-section"
+                >
+                  <button
+                    class="user-button slide-menu-header__close-button"
+                  ></button>
+                  <img
+                    class="main-logo"
+                    src="assets/images/header/logo.svg"
+                    alt="logo"
+                  />
+                </div>
+                <button
+                  class="user-button slide-menu-header__search-button"
+                ></button>
+              </header>
+              <nav class="burger-slide-menu__main-menu">
+                <div
+                  class="text-decoration burger-slide-menu__text-decoration"
+                ></div>
+                <ul class="burger-slide-menu__main-menu-list">
+                  <li class="burger-slide-menu__main-menu-item">
+                    <a
+                      href="#"
+                      class="burger-slide-menu__main-menu-link burger-slide-menu__main-menu-link--chosen"
+                      >Ремонт техники</a
+                    >
+                  </li>
+                  <li class="burger-slide-menu__main-menu-item">
+                    <a href="#" class="burger-slide-menu__main-menu-link"
+                      >Услуги и сервисы</a
+                    >
+                  </li>
+                  <li class="burger-slide-menu__main-menu-item">
+                    <a href="#" class="burger-slide-menu__main-menu-link"
+                      >Корпоративным клиентам</a
+                    >
+                  </li>
+                  <li class="burger-slide-menu__main-menu-item">
+                    <a href="#" class="burger-slide-menu__main-menu-link"
+                      >Продовцам техники</a
+                    >
+                  </li>
+                  <li class="burger-slide-menu__main-menu-item">
+                    <a href="#" class="burger-slide-menu__main-menu-link"
+                      >Партнерам</a
+                    >
+                  </li>
+                  <li class="burger-slide-menu__main-menu-item">
+                    <a href="#" class="burger-slide-menu__main-menu-link"
+                      >Производителям</a
+                    >
+                  </li>
+                  <li class="burger-slide-menu__main-menu-item">
+                    <a href="#" class="burger-slide-menu__main-menu-link"
+                      >Наши сервисные центры</a
+                    >
+                  </li>
+                  <li class="burger-slide-menu__main-menu-item">
+                    <a href="#" class="burger-slide-menu__main-menu-link"
+                      >Контакты</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="burger-bottom-contact-language">
+              <div class="burger-bottom-contact-language__buttons">
+                <div class="user-button call-button"></div>
+                <div class="user-button chat-button"></div>
+                <div class="user-button profile-button"></div>
+              </div>
+              <div class="connection-text">
+                <a
+                  class="connection-text__mail-link"
+                  href="mailto:mail@cps.com"
+                  target="_blank"
+                  >mail@cps.com</a
+                >
+                <a class="connection-text__tel-link" href="tel:88008908900"
+                  >8 800 890 8900</a
+                >
+              </div>
+
+              <nav class="language-switcher">
+                <ul class="language-switcher__list">
+                  <li class="language-switcher__item">
+                    <a
+                      href="#"
+                      class="language-switcher__link language-switcher__link--chosen"
+                      >RU</a
+                    >
+                  </li>
+                  <li class="language-switcher__item">
+                    <a href="#" class="language-switcher__link">EN</a>
+                  </li>
+                  <li class="language-switcher__item">
+                    <a href="#" class="language-switcher__link">CH</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
