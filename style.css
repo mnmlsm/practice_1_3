@@ -407,7 +407,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 272px;
+    width: 288px;
     min-height: 680px;
     max-height: 920px;
     height: 100%;
@@ -418,6 +418,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 88px;
 }
 
 .burger-menu-container__header {
@@ -463,7 +464,7 @@ body {
     height: 32px;
     position: absolute;
     left: 0;
-    top: 120px;
+    top: 108px;
 }
 
 .burger-slide-menu__main-menu-list {
@@ -483,8 +484,6 @@ body {
     }
 
 }
-
-@media screen and (min-width: 1120px) {}
 
 .burger-slide-menu__main-menu-link {
     text-decoration: none;
@@ -561,8 +560,6 @@ body {
         padding-top: 40px;
     }
 }
-
-@media screen and (min-width: 1120px) {}
 
 .language-switcher__link {
     text-decoration: none;
