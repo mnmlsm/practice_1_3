@@ -30,13 +30,24 @@ body {
     --decoration-color: #41F6D7;
 }
 
+
 /* Page header */
 /* container */
 .container {
     max-width: 1120px;
     margin: 0 auto;
-    position: relative;
 }
+
+@media screen and (min-width: 1120px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
 
 .page-header {
     display: flex;
@@ -60,6 +71,7 @@ body {
     align-items: center;
     width: 176px;
 }
+
 
 .page-header__logo-burger-btn-section {
     margin-left: 16px;
@@ -378,40 +390,80 @@ body {
 
 /* ==================== */
 /* Burger menu styles */
-.opacity-container {
-    display: none;
-    min-height: 680px;
+.container__opacity-container {
+    display: block;
     height: 100vh;
     width: 100%;
+    max-width: 1120px;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.96);
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    transform: translate(-1120px, 0);
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s, background-color ease-in 3.25s;  
 }
 
-@media screen and (min-width: 1120px) {
-    .opacity-container {
-        display: none;
+@media screen and (min-width: 1120px) {  
+    .container__opacity-container {
+        position: static;
+        transform: translate(0, 0);
+        order: -1;
+        max-width: 320px;
+        width: 100%;
     }
 }
 
-.burger-slide-menu {
-    width: 320px;
-    min-height: 680px;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 100%);
-    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+
+.js-page-body-stop-scroll {
+    overflow: hidden;
 }
 
-.burger-menu-container {
+
+.js-opacity-container {
+    transform: translate(0, 0);
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+.top-header-menu {
+    margin-bottom: 24px;
+}
+
+.menu-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 288px;
-    min-height: 680px;
-    max-height: 920px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.slide-menu {
+    max-width: 320px;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+@media screen and (min-width: 1120px) {
+    .slide-menu {
+        box-shadow: none;
+        box-shadow: -8px -8px 25px var(--main-background-color);
+    }
+}
+
+.slide-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 320px;
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
+    overflow: auto;
 }
 
 .slide-menu-header {
@@ -419,10 +471,14 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 88px;
+    max-width: 288px;
+    margin: 0 auto;
 }
 
-.burger-menu-container__header {
+.top_header-menu__header {
     padding: 24px 0;
+    max-width: 256px;
+    margin: 0 auto;
 }
 
 .logo-close-btn-section {
@@ -436,17 +492,24 @@ body {
     background-image: url(assets/images/header/close.png);
 }
 
+@media screen and (min-width: 1120px) {
+    .slide-menu-header__close-button {
+        display: none;
+    }
+}
+
 .slide-menu-header__search-button {
     background-image: url(assets/images/header/search.png);
 }
 
 /* these three properties will apply for all buttons */
 .user-button {
-    transition: opacity 0.3s, background-color 0.2s;
+    transition: opacity 0.35s, background-color 0.25s;
 }
 
 .user-button:hover {
-    opacity: 0.85;
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .user-button:active {
@@ -455,59 +518,74 @@ body {
 
 /* ====== */
 /* menu items slide menu */
-.burger-slide-menu__main-menu {
-    padding-top: 24px;
+.slide-menu__main-menu {
     margin: 0;
 }
 
-.burger-slide-menu__text-decoration {
-    height: 32px;
-    position: absolute;
-    left: 0;
-    top: 108px;
-}
-
-.burger-slide-menu__main-menu-list {
+.slide-menu__main-menu-list {
     list-style-type: none;
     text-decoration: none;
     padding: 0;
     margin: 0;
 }
 
-.burger-slide-menu__main-menu-item {
-    padding-bottom: 24px;
+.slide-menu__main-menu-item {
+    display: flex;
+    align-items: center;
+    margin:  20px 0;
+    border-radius: 0 6px 6px 0;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1119px) {
-    .burger-slide-menu__main-menu-item {
-        padding-bottom: 32px;
+@media screen and (min-width: 768px)  {
+    .slide-menu__main-menu-item {
+        margin: 32px 0;
     }
-
 }
 
-.burger-slide-menu__main-menu-link {
+
+.slide-menu__main-menu-item--chosen::before {
+    content: "";
+    border-right: 1px solid var(--decoration-color);
+    border-right-width: 4px;
+    height: 24px;
+    border-radius: 0 6px 6px 0;
+}
+
+.slide-menu__main-menu-link {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
+    margin-left: 16px;
     color: var(--paragraph-color);
 }
 
-.burger-slide-menu__main-menu-link:visited {
+.slide-menu__main-menu-link:visited {
     color: var(--paragraph-color);
 }
 
-.burger-slide-menu__main-menu-link--chosen {
+.slide-menu__main-menu-link--chosen {
     color: var(--menu-text-color);
+    margin-left: 12px;
 }
 
-.burger-slide-menu__main-menu-link--chosen:visited {
+.slide-menu__main-menu-link--chosen:visited {
     color: var(--menu-text-color);
+    margin-left: 12px;
+    margin-top: -8px;
+    margin-bottom: -8px;
 }
 
+/* Slide menu footer */
 
-.burger-bottom-contact-language__buttons {
+.bottom-contact-language {
+    max-width: 288px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bottom-contact-language__buttons {
     display: flex;
     width: 152px;
     justify-content: space-between;
@@ -542,38 +620,42 @@ body {
     font-weight: 600;
 }
 
-.language-switcher__list {
+.language-switcher-buttons {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.language-switcher__item {
-    font-weight: 500;
-    padding-right: 8px;
-    padding-bottom: 32px;
+.language-switcher-buttons__button {
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 32px;
+    border: none;
+    background: none;
+    padding: 0;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1119px) {
-    .language-switcher__item {
-        padding-top: 40px;
+@media screen and (min-width: 768px) {
+    .language-switcher-buttons__button {
+        margin-top: 40px;
     }
 }
 
-.language-switcher__link {
+.language-switcher-buttons__button {
     text-decoration: none;
     color: var(--paragraph-color);
+    cursor: pointer;
 }
 
-.language-switcher__link:visited {
+.language-switcher-buttons__button:visited {
     color: var(--paragraph-color);
 }
 
-.language-switcher__link--chosen {
+.language-switcher-buttons__button--chosen {
     color: var(--menu-text-color);
 }
 
-.language-switcher__link--chosen:visited {
+.language-switcher-buttons__button--chosen:visited {
     color: var(--menu-text-color);
 }

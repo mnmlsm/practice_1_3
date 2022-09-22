@@ -1,15 +1,23 @@
 // Открывание и закрывание меню по нажатию кнопки
-const closeButton = document.querySelector(".slide-menu-header__close-button");
-const burgerButton = document.querySelector(".logo-burger-btn-section__burger-button");
 
-const menuToHide = document.querySelector(".opacity-container");
+const closeButton = document.querySelector(".js-close-button");
+const burgerButton = document.querySelector(".js-burger-button");
+const menuToHide = document.querySelector(".js-container");
+const pageBody = document.querySelector(".js-page-body-selection");
 
+const mainMenuList = document.querySelector(".js-main-menu__list");
+console.log(mainMenuList);
+
+// Слайд меню
 burgerButton.addEventListener("click", () => {
-    menuToHide.style.cssText = "display: block;";
-    console.log();
+    menuToHide.classList.toggle("js-opacity-container");
+    pageBody.classList.toggle("js-page-body-stop-scroll");
 });
 
-closeButton.addEventListener("click", () => {
-    menuToHide.style.cssText = "display: none;";
-    console.log();
+menuToHide.addEventListener("click", (event) => {
+    if (event.target.classList[2] == "js-close-button"
+        || event.target.classList[2] == "js-opacity-container") {
+        menuToHide.classList.toggle("js-opacity-container");
+        pageBody.classList.toggle("js-page-body-stop-scroll");
+    }
 });

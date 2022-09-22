@@ -17,21 +17,20 @@
     <!-- подключение скриптов -->
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body class="page-body js-page-body-selection">
     <div class="container">
-      <!-- Header -->
+      <div class="page">
+              <!-- Header -->
       <header class="page-header">
         <div
           class="logo-burger-btn-section page-header__logo-burger-btn-section"
         >
           <button
-            class="user-button logo-burger-btn-section__burger-button"
+            class="user-button logo-burger-btn-section__burger-button js-burger-button"
           ></button>
-          <img
-            class="main-logo"
-            src="assets/images/header/logo.svg"
-            alt="logo"
-          />
+              <a href="#" class="main-logo-link">
+                <img class="main-logo" src="assets/images/header/logo.svg" alt="logo" />
+              </a>
           <div class="divider-image"></div>
         </div>
         <div class="user-buttons-set">
@@ -82,7 +81,7 @@
         </div>
         <!-- Main Menu -->
         <nav class="main-menu">
-          <ul class="main-menu__list">
+          <ul class="main-menu__list js-main-menu__list">
             <li class="main-menu__item main-menu__item--focused">
               <a href="#" class="main-menu__link">Ремонтируемые устройства</a>
             </li>
@@ -141,82 +140,82 @@
           />
         </section>
       </main>
-      <div class="opacity-container">
-        <div class="burger-slide-menu">
-          <div class="burger-menu-container">
-            <div class="burger-top-logo-menu">
-              <header class="slide-menu-header burger-menu-container__header">
+      </div>
+      <div class="container__opacity-container js-container">
+        <div class="slide-menu">
+          <div class="menu-container">
+            <div class="top-header-menu">
+              <header class="slide-menu-header menu-container__header">
                 <div
                   class="logo-close-btn-section slide-menu__logo-close-btn-section"
                 >
                   <button
-                    class="user-button slide-menu-header__close-button"
+                    class="user-button slide-menu-header__close-button js-close-button"
                   ></button>
-                  <img
-                    class="main-logo"
-                    src="assets/images/header/logo.svg"
-                    alt="logo"
-                  />
+                  <a href="#" class="main-logo-link">
+                    <img
+                      class="main-logo"
+                      src="assets/images/header/logo.svg"
+                      alt="logo"
+                    />
+                </a>
                 </div>
                 <button
                   class="user-button slide-menu-header__search-button"
                 ></button>
               </header>
-              <nav class="burger-slide-menu__main-menu">
-                <div
-                  class="text-decoration burger-slide-menu__text-decoration"
-                ></div>
-                <ul class="burger-slide-menu__main-menu-list">
-                  <li class="burger-slide-menu__main-menu-item">
+              <nav class="slide-menu__main-menu">
+                <ul class="slide-menu__main-menu-list">
+                  <li class="slide-menu__main-menu-item slide-menu__main-menu-item--chosen">
                     <a
                       href="#"
-                      class="burger-slide-menu__main-menu-link burger-slide-menu__main-menu-link--chosen"
+                      class="slide-menu__main-menu-link slide-menu__main-menu-link--chosen"
                       >Ремонт техники</a
                     >
                   </li>
-                  <li class="burger-slide-menu__main-menu-item">
-                    <a href="#" class="burger-slide-menu__main-menu-link"
+                  <li class="slide-menu__main-menu-item">
+                    <a href="#" class="slide-menu__main-menu-link"
                       >Услуги и сервисы</a
                     >
                   </li>
-                  <li class="burger-slide-menu__main-menu-item">
-                    <a href="#" class="burger-slide-menu__main-menu-link"
+                  <li class="slide-menu__main-menu-item">
+                    <a href="#" class="slide-menu__main-menu-link"
                       >Корпоративным клиентам</a
                     >
                   </li>
-                  <li class="burger-slide-menu__main-menu-item">
-                    <a href="#" class="burger-slide-menu__main-menu-link"
-                      >Продовцам техники</a
+                  <li class="slide-menu__main-menu-item">
+                    <a href="#" class="slide-menu__main-menu-link"
+                      >Продавцам техники</a
                     >
                   </li>
-                  <li class="burger-slide-menu__main-menu-item">
-                    <a href="#" class="burger-slide-menu__main-menu-link"
+                  <li class="slide-menu__main-menu-item">
+                    <a href="#" class="slide-menu__main-menu-link"
                       >Партнерам</a
                     >
                   </li>
-                  <li class="burger-slide-menu__main-menu-item">
-                    <a href="#" class="burger-slide-menu__main-menu-link"
+                  <li class="slide-menu__main-menu-item">
+                    <a href="#" class="slide-menu__main-menu-link"
                       >Производителям</a
                     >
                   </li>
-                  <li class="burger-slide-menu__main-menu-item">
-                    <a href="#" class="burger-slide-menu__main-menu-link"
+                  <li class="slide-menu__main-menu-item">
+                    <a href="#" class="slide-menu__main-menu-link"
                       >Наши сервисные центры</a
                     >
                   </li>
-                  <li class="burger-slide-menu__main-menu-item">
-                    <a href="#" class="burger-slide-menu__main-menu-link"
+                  <li class="slide-menu__main-menu-item">
+                    <a href="#" class="slide-menu__main-menu-link"
                       >Контакты</a
                     >
                   </li>
                 </ul>
               </nav>
             </div>
-            <div class="burger-bottom-contact-language">
-              <div class="burger-bottom-contact-language__buttons">
-                <div class="user-button call-button"></div>
-                <div class="user-button chat-button"></div>
-                <div class="user-button profile-button"></div>
+            <div class="bottom-contact-language">
+              <div class="bottom-contact-language__buttons">
+                <button class="user-button call-button"></button>
+                <button class="user-button chat-button"></button>
+                <button class="user-button profile-button"></button>
               </div>
               <div class="connection-text">
                 <a
@@ -229,24 +228,11 @@
                   >8 800 890 8900</a
                 >
               </div>
-
-              <nav class="language-switcher">
-                <ul class="language-switcher__list">
-                  <li class="language-switcher__item">
-                    <a
-                      href="#"
-                      class="language-switcher__link language-switcher__link--chosen"
-                      >RU</a
-                    >
-                  </li>
-                  <li class="language-switcher__item">
-                    <a href="#" class="language-switcher__link">EN</a>
-                  </li>
-                  <li class="language-switcher__item">
-                    <a href="#" class="language-switcher__link">CH</a>
-                  </li>
-                </ul>
-              </nav>
+              <div class="language-switcher-buttons">
+                  <button class="language-switcher-buttons__button language-switcher-buttons__button--chosen">RU</button>
+                  <button class="language-switcher-buttons__button">EN</button>
+                  <button class="language-switcher-buttons__button">CH</button>
+              </div>
             </div>
           </div>
         </div>
